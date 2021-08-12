@@ -15,6 +15,8 @@ create_cache_dir() {
 create_log_dir
 create_cache_dir
 
+chown proxy:proxy /dev/stdout
+
 # allow arguments to be passed to squid
 if [[ ${1:0:1} = '-' ]]; then
   EXTRA_ARGS="$@"
